@@ -1,0 +1,37 @@
+.wp-front-page {
+  .section-slide {
+    .slider {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      .slider-item {
+        width: 100%;
+        height: 100vh;
+        &.slider-item01 {
+          background: url(../img/slide01.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        &.slider-item02 {
+          background: url(../img/slide02.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        &.slider-item03 {
+          background: url(../img/slide03.jpg);
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: cover;
+        }
+        &.slider-item04 {
+          background: url(../img/slide04.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

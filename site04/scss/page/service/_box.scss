@@ -1,0 +1,43 @@
+.page-service {
+  section {
+    padding: 20px 0;
+    .service-box {
+      position: relative;
+      border-radius: 5px;
+      margin-top: 2rem;
+      padding: 4rem 2rem 3rem;
+      background: $color-white;
+      z-index: 2;
+      &.price {
+        .service-box__title {
+          background: $color-strong;
+        }
+      }
+      &.service {
+        .service-box__title {
+          background: $color-main;
+        }
+      }
+      &.other {
+        .service-box__title {
+          background: $color-attention;
+        }
+      }
+      &__title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        font-size: $font-size-m;
+        white-space: nowrap;
+        padding: .3rem 2rem;
+        border-radius: 5px;
+        @include mq(sm) {
+          padding: .3rem 3rem;   
+          font-size: $font-size-l;   
+        }
+      }
+    }
+  }
+}

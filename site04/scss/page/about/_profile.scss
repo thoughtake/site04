@@ -1,0 +1,147 @@
+.page-about {
+  .section-profile {
+    .container {
+      .bk {
+        position: absolute;
+        display: block;
+        height: auto;
+        object-fit: contain;
+        z-index: -1;
+        &.pho01 {
+          top: 250px;
+          right: 0px;
+          width: 50%;
+          @include mq(sm) {
+            top: 220px;
+            right: 100px;
+            width: 40%;
+          }
+          @include mq(md) {
+            top: 150px;
+            right: 100px;
+            width: 30%;
+          }
+          @include mq(lg) {
+            top: 150px;
+            right: 15%;
+            width: 25%;
+          }
+        }
+        &.pho02 {
+          top: 23%;
+          right: 0;
+          width: 60%;
+          max-height: 100%;
+          @include mq(sm) {
+            top: 27%;
+            right: 0;
+            width: 50%;
+          }
+          @include mq(md) {
+            top: 330px;
+            right: 0;
+            width: 35%;
+          }
+          @include mq(lg) {
+            top: 320px;
+            right: 50px;
+            width: 30%;
+          }
+          @include mq(xl) {
+            top: 350px;
+            right: 50px;
+            width: 30%;             
+          }
+          @include mq(xxl) {
+            top: 400px;
+            right: 50px;
+            width: 30%;            
+          }
+        }
+      }      
+    }
+    .motto {
+      font-family: $font-family-mincho;
+      font-size: $font-size-l;
+      @include mq(sm) {
+        font-size: $font-size-xl;
+      }
+      text-align: center;
+      margin-bottom: 1.5em;
+      span {
+        display: inline-block;
+      }      
+    }
+    .texts {
+      text-align: center;
+      &__wrapper {
+        position: relative;
+        text-align: start;
+        text-shadow:2px 2px 0 $color-white, -2px -2px 0 $color-white,
+        -2px 2px 0 $color-white, 2px -2px 0 $color-white,
+        0px 2px 0 $color-white,  0 -2px 0 $color-white,
+        -2px 0 0 $color-white, 2px 0 0 $color-white;
+        .text {
+          position: relative;
+          font-size: $font-size-default;
+          padding-right: 0;
+          @include mq(sm) {
+            font-size: $font-size-sm;
+            padding-right: 0;
+          }
+          @include mq(lg) {
+            padding-right: 20%;
+          }
+          margin-bottom: 1.5em;
+          span {
+            display: inline-block;
+          }
+          &.text01 {
+            margin-bottom: 5rem;
+            @include mq(sm) {
+              margin-bottom: 1.5em;
+            }
+          }
+        }
+        .name {
+          display: inline-block;
+          font-size: $font-size-default;
+          margin-top: 1.7rem;
+          @include mq(sm) {
+            font-size: $font-size-sm;
+          }
+          margin-bottom: 1.5em;
+          span {
+            margin-right: 1em;
+          }
+        }
+      }
+    }
+    .picture {
+      position: relative;
+      margin: 0 auto;
+      width: 90%;
+      @include mq(sm) {
+        width: 50%;
+      }
+      @include mq(lg) {
+        width: 40%;
+      }
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   display: block;
+      //   width: 100%;
+      //   padding-top: 150%;
+      // }
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

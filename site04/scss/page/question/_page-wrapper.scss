@@ -1,0 +1,26 @@
+.wp-page.page-question {
+  .content-wrapper {
+    min-height: 1000px;
+    .bk {  
+      &.bk02 {
+        top: 792px; 
+      } 
+      &.bk03 {
+        width: 45%;
+        top: 1300px;
+        @include mq(md) {
+          width: 25%;
+        }
+      }
+      &.bk04 {
+        width: 45%;
+        top: 3500px;
+        right: 0;
+        z-index: -1;
+        @include mq(md) {
+          width: 25%;
+        }
+      }     
+    }
+  }
+}

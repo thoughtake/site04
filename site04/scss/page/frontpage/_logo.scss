@@ -1,0 +1,56 @@
+#splash {
+  position: fixed;
+  z-index: map-get($layer, 'splash');
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  text-align: center;
+  &__logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    svg {
+      max-width: 90%;
+      width: 500px;
+    }
+  }
+}
+
+#vlogo {
+  .st {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    // stroke-dasharray: 1500;
+    // stroke-dashoffset: 1500;   
+  }
+  .st0 {
+    stroke-width: 100;
+  }
+  .st1 {
+    stroke-width: 100;
+  }
+  .st2 {
+    stroke-width: 100;
+  }
+  .st3 {
+    stroke-width: 100;
+  }
+  .st4 {
+    stroke-width: 100;
+  }
+  .st5 {
+    stroke-width: 100;
+  }
+  .st6 {
+    stroke-width: 100;
+  }
+  .st7 {
+    stroke-width: 100;
+  }
+}

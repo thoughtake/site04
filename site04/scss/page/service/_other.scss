@@ -1,0 +1,115 @@
+.page-service {
+  .section-other {
+    .service-box {
+      padding: 7rem 2rem 3rem;
+      &__contents {
+        padding-left: 0;
+        @include mq(sm) {
+          padding-left: calc(#{$service-icon} / 2);
+        }
+        &__content {
+          position: relative;        
+          min-height: 100px;
+          padding: 3rem 1rem 2rem 1rem;
+          background: $color-white;
+          margin-bottom: 4rem;
+          border: 3px solid $color-attention;
+          border-radius: 5px;
+          z-index: 3;
+          @include mq(sm) {
+            padding: 2rem 2rem 2rem 2rem;
+          }
+          &__title {
+            position: absolute;
+            top: calc(#{$service-icon} / -2);
+            width: 100%;
+            height: 90px;
+            .wrapper {
+              position: absolute;
+              left: calc(50% - calc(#{$service-icon}/ 2 - 1rem));
+              transform: translateX(-50%);
+              display: flex;
+              align-items: center;
+              height: 90px;
+              padding-left: calc(#{$service-icon} / 2);
+              z-index: 4;
+              @include mq(sm) {
+                left: calc(#{$service-icon} / -2); 
+                transform: translateX(0);    
+              }
+              .img-wrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: $service-icon;
+                height: $service-icon;
+                background: $color-white;
+                border: 5px solid $color-attention;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+              img {
+                display: block;
+                width: 75%;
+                height: 75%;
+                object-fit: contain;
+              }
+              h3 {
+                display: inline-block;
+                white-space: nowrap;
+                font-size: $font-size-l;
+                background: $color-attention;
+                color: $color-white;
+                border-radius: 999px;
+                padding: 5px 20px 5px 50px;
+                @include mq(sm) {
+                  font-size: $font-size-l;
+                }
+              }
+            }
+          }
+          p {
+            font-size: $font-size-sm;
+            &:not(:first-child) {
+              margin-top: 1em;
+            }
+            &.br {
+              margin-top: 2em;
+            }
+            span {
+              &.emp {
+                font-size: 1em;
+                font-weight: bold;
+                color: $color-attention;
+              }
+              &.under {
+                text-decoration: underline;
+              }
+            }
+          }
+        } //&__content
+      }
+      & > p {
+        font-size: $font-size-s;
+        font-weight: bold;
+        margin-top: -1em;
+        text-align: center;
+        color: $color-attention;
+        span {
+          display: inline-block;
+          &.supplement {
+            font-size: 0.8em;
+            font-weight: normal;
+            padding: 1em 0;
+          }
+        }
+        @include mq(sm) {
+          font-size: $font-size-m;
+        }
+      }
+    } //.service-box
+  }
+}

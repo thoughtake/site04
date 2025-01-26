@@ -1,0 +1,19 @@
+.page-contact {
+  .main {
+    .section-page_title {
+      background: url(../img/title-contact.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include mq(md) {
+        background-position: left top;
+      }
+      @include mq(xl) {
+        background-position: left -100px;
+      }
+      @include mq(xxl) {
+        background-position: left -150px;
+      }
+    }//.section-page_title
+  }
+}

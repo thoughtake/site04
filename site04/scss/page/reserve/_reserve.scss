@@ -1,0 +1,118 @@
+.wp-page.page-reserve {
+  .section-reserve {
+    .contact-controls {
+      .contact-control {
+        & > dd {
+          & > dl {
+            & > dt {
+              margin-bottom: .2rem;
+            }
+            .wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              margin: -.3rem 0 .8rem -.5rem;
+              & > dd {
+                margin: .3rem 0 0 .5rem;
+                input[type="text"] {
+                    width: 180px;
+                }
+              }
+            }
+          }
+          select.form-select {
+            width: 180px;
+          }
+        } //& > dd
+        &.select {
+          & > dd {
+            span.error {
+                margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-attention {
+      font-size: 1rem;
+      background: rgba($color: $color-water, $alpha: 0.1);
+      padding: 1rem;
+      margin-bottom: 2rem;
+      .title {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: .5em;
+      }
+      .text {
+        // &:not(:first-child) {
+        //   margin-top: 1rem;
+        // }
+        p {
+          padding-left: 1em;
+          span {
+            &.strong {
+              color: $color-strong;
+            }
+          }
+        }
+        table {
+          border-collapse: collapse;
+          margin-left: 1em;
+          margin-top: .3em;
+          tr, td {
+            border: 1px solid $color-line;
+            padding: .2em .5em;
+          }
+        }
+      }
+    }
+    .contact-checks {
+      text-align: center;
+      margin-bottom: 2rem;
+      .wrapper {
+        display: inline-block;
+      }
+      .contact-check {
+        text-align: start;
+        label {
+          display: inline-block;
+          margin: .5em 0;
+          span {
+            font-size: $font-size-s;
+            & > a {
+              color: $color-main;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+
+    &.confirm {
+      .contact-controls {
+        .contact-control {
+          & > dt {
+            & > .contact-label {
+              &.required {
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+          & > dd {
+            background: $color-white;
+            padding: 0.4em 0.8em;
+          }
+        }
+      }
+      .contact-attention {
+        display: none;
+      }
+      .contact-checks {
+        display: none;
+      }
+    }
+  }
+}

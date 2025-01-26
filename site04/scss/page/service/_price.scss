@@ -1,0 +1,70 @@
+.page-service {
+  .section-price {
+    .service-box {
+      padding: 3rem 2rem 3rem;
+      .price {
+        text-align: center;
+        color: $color-strong;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+        span {
+          display: inline-block;
+        }
+        &__price {
+          font-size: 2.5em;
+          @include mq(sm) {
+            font-size: 3em;
+          }
+        }
+        &__yen {
+          font-size: 1.7em;
+          @include mq(sm) {
+            font-size: 2em;
+          }
+        }
+        &__tax {
+          font-size: 1.3em;
+          @include mq(sm) {
+            font-size: 1.5em;
+          }
+        }
+        .price-wrapper {
+          position: relative;
+          display: inline-block;
+          &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 110%;
+            background: $color-strong;
+          }
+        }
+      }//price
+      .text  {
+        font-size: $font-size-s;
+        margin-top: 1.5em;
+        text-align: center;
+        color: $color-strong;
+        span {
+          display: inline-block;
+        }
+        .supplement {
+          font-size: $font-size-default;
+          font-weight: normal;
+          padding: 1em 0 0;
+        }
+        @include mq(sm) {
+          font-size: $font-size-s;  
+          .supplement {
+            font-size: $font-size-default;
+          }
+        }
+      }
+    }//.service-box
+  }
+}

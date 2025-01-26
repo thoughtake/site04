@@ -1,0 +1,14 @@
+.breadcrumb {
+  font-size: $font-size-default;
+  color: rgba($color-text, 0.6);
+  .breadcrumb_inner {
+    span {
+      a {
+        transition: color .5s;
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}

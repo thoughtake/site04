@@ -1,0 +1,121 @@
+$service-icon: 70px;
+
+.page-service {
+  .section-service {
+    margin-bottom: 1.8rem;
+    .service-box {
+      padding: 5rem 2rem 3rem;
+      @include mq(md) {
+        padding: 5rem 2rem 3rem;   
+      }
+      &__contents {
+        padding-left: 0;
+        @include mq(sm) {
+          padding-left: calc(#{$service-icon} / 2);
+        }
+        &__content {
+          position: relative;        
+          min-height: 100px;
+          padding: 3rem 1rem 2rem 1rem;
+          background: $color-white;
+          margin-bottom: 4rem;
+          border: 3px solid $color-main;
+          border-radius: 5px;
+          z-index: 3;
+          @include mq(sm) {
+            padding: 2rem 2rem 2rem 2rem;
+          }
+          &__title {
+            position: absolute;
+            top: calc(#{$service-icon} / -2);
+            width: 100%;
+            height: $service-icon;
+            .wrapper {
+              position: absolute;
+              left: calc(50% - calc(#{$service-icon}/ 2 - 1rem));
+              transform: translateX(-50%);
+              display: flex;
+              align-items: center;
+              height: $service-icon;
+              padding-left: calc(#{$service-icon} / 2);
+              z-index: 4;
+              @include mq(sm) {
+                left: calc(#{$service-icon} / -2); 
+                transform: translateX(0);    
+              }
+              .img-wrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: $service-icon;
+                height: $service-icon;
+                background: $color-white;
+                border: 5px solid $color-main;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+              img {
+                display: block;
+                width: 75%;
+                height: 75%;
+                object-fit: contain;
+              }
+              h3 {
+                display: inline-block;
+                white-space: nowrap;
+                font-size: $font-size-m;
+                background: $color-main;
+                color: $color-white;
+                border-radius: 999px;
+                padding: 5px 20px 5px 45px;
+                @include mq(sm) {
+                  font-size: $font-size-m;
+                }
+              }
+            }
+          }
+          p {
+            font-size: $font-size-s;
+            &:not(:first-child) {
+              margin-top: 1em;
+            }
+            &.br {
+              margin-top: 2em;
+            }
+            span {
+              &.emp {
+                font-size: 1em;
+                font-weight: bold;
+                color: $color-main;
+              }
+              &.under {
+                text-decoration: underline;
+              }
+            }
+          }
+        } //&__content
+      }
+      & > p {
+        font-size: $font-size-s;
+        font-weight: bold;
+        margin-top: -1em;
+        text-align: center;
+        color: $color-main;
+        span {
+          display: inline-block;
+          &.supplement {
+            font-size: 0.8em;
+            font-weight: normal;
+            padding: 1em 0;
+          }
+        }
+        @include mq(sm) {
+          font-size: $font-size-sm;
+        }
+      }
+    } //.service-box
+  }
+}

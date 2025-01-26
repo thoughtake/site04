@@ -1,0 +1,18 @@
+.wp-page.page-privacy {
+  .section-policy {
+    .container {
+      font-size: $font-size-default;
+      background: $color-white;
+      padding: 40px 5%;
+      @include mq(lg) {
+        padding: 40px 10%;
+      }
+      .title {
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

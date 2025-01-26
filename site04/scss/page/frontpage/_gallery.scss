@@ -1,0 +1,56 @@
+.wp-front-page {
+  .section-gallery {
+    .gallery {
+      position: relative;
+      z-index: 1;
+      height: 500px;
+      .gallery-item {
+        width: 100%;
+        height: 500px;
+        &.gallery-item01 {
+          background: url(../img/gallery01.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item02 {
+          background: url(../img/gallery02.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item03 {
+          background: url(../img/gallery03.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item04 {
+          background: url(../img/gallery04.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item05 {
+          background: url(../img/gallery05.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item06 {
+          background: url(../img/gallery06.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+        &.gallery-item07 {
+          background: url(../img/gallery07.jpg);
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+        }
+
+      }
+    }
+  }
+}

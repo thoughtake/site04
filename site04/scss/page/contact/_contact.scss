@@ -1,0 +1,48 @@
+.wp-page.page-contact {
+  .section-contact {
+    .contact-checks {
+      text-align: center;
+      margin-bottom: 2rem;
+      .wrapper {
+        display: inline-block;
+      }
+      .contact-check {
+        text-align: start;
+        label {
+          display: inline-block;
+          margin: .5em 0;
+          span {
+            font-size: $font-size-s;
+            & > a {
+              color: $color-main;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    &.confirm {
+      .contact-controls {
+        .contact-control {
+          dt {
+            label.contact-label {
+              &.required {
+                &::after {
+                  display: none;
+                }
+              }
+            }
+          }
+          dd {
+            background: $color-white;
+            padding: 0.4em 0.8em;
+          }
+        }
+      }
+      .contact-checks {
+        display: none;
+      }
+    }
+  }
+}

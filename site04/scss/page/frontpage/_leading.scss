@@ -1,0 +1,52 @@
+.wp-front-page {
+  .section-leading {
+    position: relative;
+    text-shadow:2px 2px 0 $color-white, -2px -2px 0 $color-white,
+                    -2px 2px 0 $color-white, 2px -2px 0 $color-white,
+                    0px 2px 0 $color-white,  0 -2px 0 $color-white,
+                    -2px 0 0 $color-white, 2px 0 0 $color-white;
+    .bk {
+      display: block;
+      position: absolute;
+      height: auto;
+      z-index: -1;
+      &.bk01 {
+        width: 40%;
+        top: 0;
+        left: 0;
+        @include mq(md) {
+          width: auto;
+          height: 100%;
+        }
+      }
+      &.bk02 {
+        width: 45%;
+        bottom: 0;
+        right: 0;  
+        @include mq(md) {
+          width: auto;      
+          height: 100%;
+        } 
+      }
+    }
+    &__motto {
+      font-family: $font-family-mincho;
+      font-size: $font-size-l;
+      @include mq(sm) {
+        font-size: $font-size-xl;
+      }
+      text-align: center;
+      margin-bottom: .5em;
+      span {
+        display: inline-block;
+      }
+    }
+    &__motto-sub {
+      text-align: center;
+      font-size: $font-size-sm;
+      @include mq(sm) {
+        font-size: $font-size-m;
+      }
+    }
+  }
+}

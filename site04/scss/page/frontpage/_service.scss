@@ -1,0 +1,257 @@
+.wp-front-page {
+  .section-service {
+    position: relative;
+    background-color: transparent;
+    transition: background-color 3s;
+    &.color {
+      background-color: rgba($color-water, 0.3);
+      .bk {
+        &.bk01 {
+          &.wt {
+            opacity: 1;
+          }
+        }
+        &.bk02 {
+          &.wt {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .bk {
+      display: block;
+      position: absolute;
+      height: auto;
+      &.bk01 {
+        width: 40%;
+        top: 0;
+        right: 0;
+        &.cl {
+          z-index: 1;
+        }
+        &.wt {
+          z-index: 2;
+          transition: opacity 3s;
+          opacity: 0;
+        }
+        @include mq(md) {
+          width: 20%;
+        }
+      }
+      &.bk02 {
+        width: 45%;
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+        &.cl {
+          z-index: 1;
+        }
+        &.wt {
+          z-index: 1;
+          transition: opacity 3s;
+          opacity: 0;
+        }
+        @include mq(md) {
+          width: 25%;
+        }      
+      }
+    }
+    .section-title {
+      position: relative;
+      z-index: 3;
+    }
+    .container-fluid {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .color-box {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 80%;
+        background: rgba($color-main, 0.5);
+        @include mq(xxl) {
+          top: 10%;
+          height: 55%;
+          transform: translateX(-50%);
+        }
+      }
+      .picture-box {
+        display: none;
+        position: absolute;
+        width: 35%;
+        border: 4px solid #fff;
+        z-index: 3;
+        background: url(../img/camera01.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 10px 3px rgba($color: #000000, $alpha: 0.3);
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          padding-top: 66%;
+        }
+        @include mq(md) {
+          display: block;
+          width: 35%;
+          top: 13%;
+          right: 8%;
+          transform: rotate(5deg);          
+        }
+        @include mq(xl) {
+          display: block;
+          width: 30%;
+          top: 3%;
+          right: 8%;
+          transform: rotate(5deg);          
+        }
+        @include mq(xxl) {
+          display: block;
+          width: 30%;
+          top: calc(50%);
+          left: calc(50% - 15%);    
+          transform: translate(-50%, -50%) rotate(5deg);      
+        }
+      }
+      .box {
+        position: relative; 
+        z-index: 4;
+        width: auto;
+        &__inner {
+          box-shadow: 0 0 10px 3px rgba($color: #000000, $alpha: 0.3);
+          background: $color-white;
+          padding: 2em;
+          width: 100%;
+        }
+      }
+      .left-box {
+        margin-bottom: 50px;
+        width: 100%;
+        margin-right: 0;
+        @include mq(md) {
+          width: 70%;
+          margin-right: 30%;
+        }
+        @include mq(xxl) {
+          width: calc((100% - 5%) / 2 - 1px);
+          margin-right: 5%;
+        }
+        .price {
+          text-align: center;
+          color: $color-strong;
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 1em;
+          span {
+            display: inline-block;
+          }
+          &__price {
+            font-size: 2.5em;
+            @include mq(sm) {
+              font-size: 3em;
+            }
+          }
+          &__yen {
+            font-size: 1.7em;
+            @include mq(sm) {
+              font-size: 2em;
+            }
+          }
+          &__tax {
+            font-size: 1.1em;
+            @include mq(sm) {
+              font-size: 1.5em;
+            }
+          }
+          .price-wrapper {
+            position: relative;
+            display: inline-block;
+            &::before {
+              content: '';
+              position: absolute;
+              display: block;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 2px;
+              width: 110%;
+              background: $color-strong;
+            }
+          }
+        }//price
+        .price-text {
+          color: $color-strong;
+          font-weight: bold;
+          text-align: center;
+          font-size: $font-size-sm;
+          @include mq(sm) {
+            font-size: $font-size-m;
+          }
+          .sup {
+            font-size: 0.7em;
+          }
+          .lists01 {
+            display: inline-block;
+            text-align: start;
+            li {
+              margin-bottom: .3em;
+              &.supplement {
+                margin-top: .1em;
+                margin-bottom: 0;
+              }
+              &::before {
+                background: $color-strong;
+              }
+            }
+          }
+        }//price-text
+  
+      }//left-box
+      .right-box {
+        width: 100%;
+        @include mq(xxl) {
+          width: calc((100% - 5%) / 2 - 1px);
+        }
+        .service {
+          font-size: $font-size-sm;
+          .lists01 {
+            li {
+              margin-top: 1em;
+              &:first-child {
+                margin-top: 0;
+              }
+              &::before {
+                background: $color-main;
+                width: 6px;
+                height: 6px;
+              }
+              span {
+                &.main {
+                  color: $color-main;
+                  text-decoration: underline;
+                  font-weight: bold;
+                  font-size: inherit;
+                }
+                &.sub {
+                  color: $color-text;
+                  font-size: $font-size-default;
+                }
+              }
+            }
+          }
+        }
+      }//right-box
+    }//container-fluid
+    .btn-wrapper {
+      padding: 4rem 0 2rem;
+    }
+  }//section-service
+}

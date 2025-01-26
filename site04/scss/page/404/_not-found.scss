@@ -1,0 +1,17 @@
+.wp-page.page-not_found {
+  .section-not_found {
+    padding: 20px 0;
+    p {
+      margin-bottom: .5em;
+      text-shadow:2px 2px 0 $color-white, -2px -2px 0 $color-white,
+      -2px 2px 0 $color-white, 2px -2px 0 $color-white,
+      0px 2px 0 $color-white,  0 -2px 0 $color-white,
+      -2px 0 0 $color-white, 2px 0 0 $color-white;
+      text-align: center;
+      &.nf {
+        font-size: $font-size-m;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

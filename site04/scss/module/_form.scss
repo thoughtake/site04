@@ -1,0 +1,150 @@
+.wp-form {
+  form {
+    .contact-controls {
+      .contact-control {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        @include mq(md) {
+          margin-bottom: 3rem;
+        }
+        & > dt {
+          width: 100%;
+          margin-bottom: .5em;
+          padding: 0;
+          @include mq(md) {
+            width: 25%;
+            margin-bottom: 0;
+            padding: 0.4em 0;
+          }
+          @include mq(lg) {
+            width: 25%;
+            padding: 0.4em 0;
+          }
+          & > .contact-label {
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+            &.required {
+              &::after {
+                content: "必須";
+                position: relative;
+                margin-left: .5em;
+                display: inline-block;
+                padding: .1em .5em;
+                color: $color-white;
+                background: $color-strong;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: normal;
+                @include mq(md) {
+                  position: absolute;
+                  top: 1.8rem;
+                  left: 0;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+        & > dd {
+          width: 100%;
+          position: relative;
+          @include mq(md) {
+            width: 75%;
+          }
+          @include mq(lg) {
+            width: 75%;
+          }
+          select {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      } //.contact-control
+    }//.contact-controls
+    .contact-check {
+      span.error {
+        margin-top: -.6rem;
+        margin-bottom: .5rem;
+      }
+    }
+    .contact-submit {
+      text-align: center;
+      input[type="submit"] {
+        margin: .5rem;
+      }
+    }
+  
+    input[type="text"], input[type="tel"], input[type="email"] {
+      background-color: $color-white;
+      &:focus {
+      }
+    }// text
+    input[type="date"], input[type="time"]  {
+      background-color: $color-white;
+      width: 180px;
+      &:focus {
+      }
+    }// text
+    textarea {
+      background-color: $color-white;
+      height: 400px;
+      &:focus {
+  
+      }
+    }// textarea
+    input[type="radio"] {
+      & + span {
+  
+        &::before {
+  
+        }
+        &::after {
+  
+        }
+      }
+      &:checked + span::after {
+      }
+    }// radio
+    input[type="checkbox"] {
+      & + span {
+        padding: 0 0 0 1.5em;
+        &::before {
+          border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        &::after {
+          border-bottom: 3px solid rgba($color-main, 1);
+          border-left: 3px solid rgba($color-main, 1);
+        }
+      }
+      &:checked + span::after {
+      }
+    }// checkbox
+    select {
+      background-color: $color-white;
+      &:focus {
+  
+      }
+    }// select
+    input[type="submit"] {
+      border: 1px solid $color-main;
+      background-color: $color-main;
+      color: $color-white;
+      transition: all .5s;
+      &:hover, &:focus {
+        background-color: $color-white;
+        color: $color-main;
+      }
+      &::-moz-focus-inner {
+        background-color: $color-white;
+        color: $color-main;
+      }
+    }
+    span.error {
+      color: $color-strong !important;
+      font-size: $font-size-default !important;
+    }
+  }
+}

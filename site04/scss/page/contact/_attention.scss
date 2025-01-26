@@ -1,0 +1,33 @@
+.wp-page.page-contact {
+  .section-attention {
+    padding: 20px 0;
+    p {
+      margin-bottom: .5em;
+      text-shadow:2px 2px 0 $color-white, -2px -2px 0 $color-white,
+      -2px 2px 0 $color-white, 2px -2px 0 $color-white,
+      0px 2px 0 $color-white,  0 -2px 0 $color-white,
+      -2px 0 0 $color-white, 2px 0 0 $color-white;
+      span {
+        display: inline-block;
+        &.strong {
+          color: $color-strong;
+          font-weight: bold;
+        }
+      }
+    }
+    &.confirm {
+      p {
+        text-align: center;
+      }
+    }
+    &.complete {
+      p {
+        text-align: center;
+        &.thanks {
+          font-size: $font-size-m;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}

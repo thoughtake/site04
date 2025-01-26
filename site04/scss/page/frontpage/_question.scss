@@ -1,0 +1,119 @@
+.wp-front-page {
+  .section-question {
+    position: relative;
+    background-color: transparent;
+    transition: background-color 3s;
+    &.color {
+      background-color: rgba($color-water, 0.3);
+      .bk {
+        &.bk01 {
+          &.wt {
+            opacity: 1;
+          }
+        }
+        &.bk02 {
+          &.wt {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .bk {
+      display: block;
+      position: absolute;
+      height: auto;
+      &.bk01 {
+        width: 40%;
+        bottom: 0;
+        right: 0;
+        &.cl {
+          z-index: 1;
+        }
+        &.wt {   
+          z-index: 2;     
+          transition: opacity 3s;
+          opacity: 0;
+        }
+        @include mq(md) {
+          width: 20%;
+        }      
+      }
+    }//bk
+    .section-title {
+      position: relative;
+      z-index: 3;
+    }
+    ul.questions {
+      position: relative;
+      font-size: $font-size-sm;
+      margin-bottom: 4rem;
+      z-index: 3;
+      li.question {
+        padding: 2em;
+        background: $color-white;
+        border-radius: 10px;
+        margin-bottom: 2em;
+        .wrapper {
+          display: flex;
+          flex-wrap: nowrap;
+          .left {
+            width: 50px;
+            @include mq(sm) {
+              width: 60px;
+            }
+            span {
+              display: block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              border-radius: 50%;
+              text-align: center;
+              color: $color-white;
+              font-size: $font-size-m;
+              font-weight: bold;
+              @include mq(sm) {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;       
+                font-size: $font-size-l;        
+              }
+            }
+          }
+          p {
+            width: calc(100% - 50px);
+            padding-top: 5px;
+            @include mq(sm) {
+              width: calc(100% - 60px);
+              padding-top: 10px;
+            }
+          }
+          &.que {
+            margin-bottom: 1em;
+            .left {
+              span {
+                background: rgba($color-main , 0.7);
+              }
+            }
+            p {
+              color: $color-main;
+              font-weight: bold;
+            }
+          }//que
+          &.ans {
+            .left {
+              span {
+                background: $color-main;
+              }  
+            }
+            p {
+              font-size: $font-size-default;
+            }
+          }//ans
+        }//wrapper
+      }//li.question
+    }//ul.questions
+    .btn-wrapper {
+      margin-bottom: 2rem;
+    }
+  }//section-question
+}

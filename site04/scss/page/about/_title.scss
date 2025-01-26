@@ -1,0 +1,19 @@
+.page-about {
+  .main {
+    .section-page_title {
+      background: url(../img/title-about.jpg);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include mq(lg) {
+        background-position: left -100px;
+      }
+      @include mq(xl) {
+        background-position: left -200px;
+      }
+      @include mq(xxl) {
+        background-position: left -400px;
+      }
+    }//.section-page_title
+  }
+}
